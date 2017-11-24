@@ -1,0 +1,12 @@
+.idea
+node_modules/
+index.html
+webpack.config.js
+.babelrc
+.editorconfig
+.npmignore
+.gitignore
+*.map
+app.css
+App.vue
+main.js
