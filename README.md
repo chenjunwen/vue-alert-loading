@@ -2,7 +2,7 @@
 
 > Vue 自定义弹窗加载组件
 
-##[效果演示](http://chenjunwen.github.io/vue-alert-loading)
+## [效果演示](http://chenjunwen.github.io/vue-alert-loading)
 
 
 ## 安装
