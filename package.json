@@ -1,7 +1,7 @@
 {
   "name": "vue-alert-loading",
   "description": "Vue custom load components",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "author": "chenjunwen <18296456378@163.com>",
   "license": "MIT",
   "private": false,
@@ -16,9 +16,9 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "respository":{
+  "repository": {
     "type": "git",
-    "url": "https://github.com/chenjunwen/vue-alert-loading.git"
+    "url": "git+https://github.com/chenjunwen/vue-alert-loading.git"
   },
   "keywords": [
     "vue-alert",

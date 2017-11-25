@@ -1,19 +1,19 @@
 <template>
-  <div v-show="visible" :class="'cpt-loading-mask animated fadeInNoTransform '+direction"
-       style="background: rgba(0, 0, 0, 0.2); z-index: 1000001; position: fixed;">
-    <div class="div-loading" :style="{loadingDivStyle, background: loadingBg}">
+  <div v-if="visible" :class="'cpt-loading-mask animated fadeInNoTransform '+direction"
+       :style="{background: loadingMaskBg, 'z-index': 1000001, position: 'fixed'}">
+    <div class="div-loading" :style="{width:loadingDivWidth+'px', background: loadingBg}">
       <p class="loading-title txt-textOneRow" :style="{color: titleColor}">{{title}}</p>
 
-      <div v-if="type!=='pic'" class="loading origin" :style="{ height: this.originDivHeight+'px', width: this.originDivWidth +'px'}">
+      <div v-if="type!=='pic'" class="loading origin" :style="{ height: originDivHeight+'px', width: originDivWidth +'px'}">
         <div class="div-loadingOrigin" v-for="n in originSize">
           <span :style="{'margin-top': '-10px','margin-left': '-10px', width: originWidth+'px', height: originHeight+'px', background:originBg}"></span>
         </div>
       </div>
 
-      <div class="loading pic" :style="{ height: this.originDivHeight+'px', width: this.originDivHeight +'px'}" v-else>
+      <div class="loading pic" :style="{ height: originDivHeight+'px', width: originDivHeight +'px'}" v-else>
           <img src="http://www.daiwei.org/index/images/logo/dw.png"  alt="loading" >
       </div>
-      <p class="loading-discription txt-textOneRow" style="color: rgba(255, 255, 255, 0.7);">{{text}}</p></div>
+      <p class="loading-discription txt-textOneRow" :style="{color: textColor}">{{text}}</p></div>
   </div>
 </template>
 
@@ -54,9 +54,9 @@
       // 是否显示
       visible:Boolean,
       // 中间加载div的样式
-      loadingDivStyle: {
-        type: String,
-        default:''
+      loadingDivWidth: {
+        type: Number,
+        default: 260
       },
       // 圆点的个数
       originSize:{
@@ -102,7 +102,7 @@
       // 背景遮罩层颜色
       loadingMaskBg:{
         type:String,
-        default:'rgb(254, 254, 254)'
+        default:'rgba(0, 0, 0, 0.2)'
       }
     },
     data() {
