@@ -63,7 +63,7 @@ export default {
       this[param] = true;
       setTimeout(()=>{
         this[param] = false;
-      },300000);
+      },3000);
     }
   }
 }
