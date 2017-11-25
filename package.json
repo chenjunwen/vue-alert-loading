@@ -1,7 +1,7 @@
 {
   "name": "vue-alert-loading",
   "description": "Vue custom load components",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "author": "chenjunwen <18296456378@163.com>",
   "license": "MIT",
   "private": false,
