@@ -53,7 +53,7 @@
       },
       // 是否显示
       visible:Boolean,
-      // 中间加载div的样式
+      // 中间加载div的宽度
       loadingDivWidth: {
         type: Number,
         default: 260
